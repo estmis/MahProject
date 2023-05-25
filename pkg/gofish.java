@@ -43,7 +43,6 @@ public class gofish {
     public int setCash(){
         return money;
     }
-    
     public void Deal(){
         System.out.print("Your cards are: ");
         for(int i = 0; i<5; i++){
@@ -63,7 +62,6 @@ public class gofish {
         }
         return false;
     }
-    
     public void Play(){
         int numPlays = 1;
         deck = new ArrayList<Integer>();
@@ -109,7 +107,7 @@ public class gofish {
                     if(hand.size()==0){
                         int winnings = 5*numPlays + 200;
                         money+=winnings;
-                        System.out.println("YOU WON!! Congradulations! You win $"+winnings+" ( "+numPlays+" rounds + $200). Your total is: "+money);
+                        System.out.println("YOU WON!! Congradulations! You win $"+winnings+" ( "+numPlays+" rounds + $200). Your total is: $"+money);
                         return;
                     }
                     if(deck.size()==0){
@@ -133,6 +131,5 @@ public class gofish {
                 }
             }
         }
-        //System.out.println("You've lost. Sorry buddy");
     }
 }
