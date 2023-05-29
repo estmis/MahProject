@@ -15,7 +15,6 @@ public class blackjack {
     
     public blackjack(int cash){
         money = cash;
-        Play();
     }
     public void Rules(){
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
@@ -38,7 +37,7 @@ public class blackjack {
             System.out.println("Sorry buddy. Yer broke");
             return;
         }
-        System.out.println("What will you wager? (Min 5 max 50)");
+        System.out.println("What will you wager? (Min $5 max $50)");
         int wager = sc.nextInt();
         if(wager>50||wager<5){
             System.out.println("Bruh");
@@ -105,6 +104,9 @@ public class blackjack {
         else if(sumHand(hand)<sumHand(dealerHand)){
             money-=thePot;
             System.out.println("You lost, so you lost your bet :( You now have: $"+money);
+        }
+        else if(sumHand(hand)==sumHand(dealerHand)){
+            System.out.println("It's a draw! You get your money back.");
         }
     }
     

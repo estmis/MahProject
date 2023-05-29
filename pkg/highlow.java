@@ -12,9 +12,6 @@ public class highlow{
     
     public highlow(int cash){
         money = cash;
-        secret = (int)(Math.random()*50+1);
-        rules();
-        Play();
     }
     
     public void rules(){
@@ -25,13 +22,17 @@ public class highlow{
         System.out.println("3. Good Luck!");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
     }
-    
+    public int setCash(){
+        return money;
+    }
     public void Play(){
+        secret = (int)(Math.random()*50+1);
+        rules();
         if(money<0){
         System.out.println("Sorry buddy. Yer broke");
         return;
         }
-        System.out.println("What will you wager? (Min 5 max 100)");
+        System.out.println("What will you wager? (Min $5 max $100)");
         int wager = sc.nextInt();
         if(wager>100||wager<5){
             System.out.println("Bruh");
@@ -60,7 +61,7 @@ public class highlow{
         }
         else{
             money-=wager;
-            System.out.println("Sorry buddy, you lost :(");
+            System.out.println("Sorry buddy, you lost :( You now have: $"+money);
         }
     }
 }

@@ -11,7 +11,6 @@ public class gofish {
     
     public gofish(int cash){
         money = cash;
-        Play();
     }
     
     public void Rules(){
