@@ -32,15 +32,22 @@ class starter {
             else{
                 System.out.println("Wrong input buddy");
             }
-            System.out.println("Would you like to continue playing? (1 for yes, 2 for no)");
+            System.out.println("Would you like to continue playing this game? (1 for yes, 2 for no)");
             input = sc.nextInt();
             if(input == 1){
-                System.out.println("Enter 1 for BlackJack, 2 for Gofish, 3 for HighLow, or 4 for Slots:");
-                game = sc.nextInt();
+                //balnsljakf
             }
             else{
-                System.out.println("See you next time!");
-                break;
+                System.out.println("Do you want to play a different game? (1)yes (2)no");
+                input = sc.nextInt();
+                if(input == 1){
+                    System.out.println("(1)BlackJack, (2)GoFish, (3)HighLow, and (4)Slots. Please enter the number of the game you would like to play:");
+                    game = sc.nextInt();
+                }
+                else{
+                    System.out.println("See ya later!");
+                    break;
+                }
             }
         }
     

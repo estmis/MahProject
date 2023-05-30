@@ -37,13 +37,17 @@ public class blackjack {
             System.out.println("Sorry buddy. Yer broke");
             return;
         }
-        System.out.println("What will you wager? (Min $5 max $50)");
-        int wager = sc.nextInt();
-        if(wager>50||wager<5){
-            System.out.println("Bruh");
-            return;
+        while(true){
+            System.out.println("What will you wager? (Min $5 max $50)");
+            int wager = sc.nextInt();
+            if(wager>50||wager<5){
+                System.out.println("Bruh");
+            }
+            else{
+                thePot = wager;
+                break;
+            }
         }
-        thePot = wager;
         Deal();
         while(true){
             System.out.println("Hit or Stay? (1 for Hit 2 for Stay)");
