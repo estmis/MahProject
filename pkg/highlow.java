@@ -17,7 +17,7 @@ public class highlow{
     public void rules(){
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Welcome to HighLow! Here are the rules:");
-        System.out.println("1. There is a secret number. You get 5 chances to guess it correctly");
+        System.out.println("1. There is a secret number. You get 7 chances to guess it correctly");
         System.out.println("2. If you guess it within your 7 chances, you get your wager back, plus your wager");
         System.out.println("3. Good Luck!");
         System.out.println("+++++++++++++++++++++++++++++++++++++++++++++");
@@ -61,7 +61,7 @@ public class highlow{
         }
         else{
             money-=wager;
-            System.out.println("Sorry buddy, you lost :( You now have: $"+money);
+            System.out.println("Sorry buddy, you lost :( The number was: "+secret+". You now have: $"+money);
         }
     }
 }

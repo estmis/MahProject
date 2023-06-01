@@ -32,6 +32,9 @@ class starter {
             else{
                 System.out.println("Wrong input buddy");
             }
+            if(cash==0){
+                break;
+            }
             System.out.println("Would you like to continue playing this game? (1 for yes, 2 for no)");
             input = sc.nextInt();
             if(input == 1){
@@ -50,6 +53,7 @@ class starter {
                 }
             }
         }
+        System.out.println("Goodbye.");
     
     
     
